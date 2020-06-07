@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main"
+    android:background="#000000"
+    >
+
+
+    <TextView
+        android:id="@+id/selectlevel_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Level:"
+        android:textColor="#dddddd"
+        android:textSize="20sp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        />
+
+    <Spinner
+        android:id="@+id/selectlevel_spinner"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/selectlevel_title"
+        android:layout_alignBottom="@id/selectlevel_title"
+        android:layout_marginLeft="20dp"
+        android:entries="@array/levelspinner"
+        android:background="#cccccc"
+        />
+
+    <GridView
+        android:id="@+id/studiogrid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="5"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/selectlevel_title"
+        />
+
+</RelativeLayout>
